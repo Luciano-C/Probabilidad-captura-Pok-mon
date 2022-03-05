@@ -18,5 +18,3 @@ function probabilidad_captura(salud,timidez) {
 
 
 console.log(`La probabilidad de captura es ${(probabilidad_captura(salud_maxima,timidez_agresividad) * 100).toFixed(2)}%`);
-
-
