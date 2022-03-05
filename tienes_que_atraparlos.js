@@ -1,9 +1,9 @@
+const prompt = require("prompt-sync")();
 
 
-
-let salud_maxima = 1;
-let felicidad_pokemon = 1.2;
-let timidez_agresividad = 2;
+let salud_maxima = Number(prompt("Ingrese salud máxima del Pokemón (ST): "));
+let felicidad_pokemon = Number(prompt("Ingrese nivel de felicidad del Pokémon: "));
+let timidez_agresividad = Number(prompt("Ingrese grado de timidez-agresividad del Pokémon: "));;
 
 function probabilidad_captura(salud,timidez) {
     let numero_grande = 10**6;
@@ -17,17 +17,6 @@ function probabilidad_captura(salud,timidez) {
 }
 
 
-console.log(probabilidad_captura(salud_maxima,timidez_agresividad));
+console.log(`La probabilidad de captura es ${(probabilidad_captura(salud_maxima,timidez_agresividad) * 100).toFixed(2)}%`);
 
-const readline = require("readline");
 
-const q1 = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-q1.question("Where do you live? ", function (answer) {
-  console.log(`Oh, so you live in ${answer}`);
-  console.log("Interface Closed");
-  q1.close();
-});
